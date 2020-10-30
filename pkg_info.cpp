@@ -15,6 +15,8 @@ pkg_info::pkg_info(entry* e,QWidget *parent) :
     ui(new Ui::pkg_info)
 {
         ui->setupUi(this);
+        this->setWindowTitle(QString(alpm_pkg_get_name(ent->package)));
+
         /* connect */
         connect(ui->install,SIGNAL(clicked()),this,SLOT(slot_install()));
         connect(ui->remove,SIGNAL(clicked()),this,SLOT(slot_remove()));
@@ -44,6 +46,7 @@ pkg_info::pkg_info(entry* e,QWidget *parent) :
                 ui->check_deps->setVisible(true);
                 ui->check_files->setVisible(true);
         }
+
         if(!ent->op->match_db(alpm_pkg_get_db(ent->package),LOCAL)){
                 ui->remove->setEnabled(false);
                 ui->files->setVisible(false);
@@ -51,8 +54,8 @@ pkg_info::pkg_info(entry* e,QWidget *parent) :
                 ui->check_files->setVisible(false);
         }
 
+        ui->scrollAreaWidgetContents->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
         emit ui->detail->clicked();
-
 }
 void pkg_info::add_file_name(QString& text,alpm_list_t* list)
 {
@@ -61,27 +64,44 @@ void pkg_info::add_file_name(QString& text,alpm_list_t* list)
                 text += QString((char*)i->data) + "\n";
         }
 }
-void pkg_info::add_depend_name(QString& text,alpm_list_t* list)
+void pkg_info::add_depend_name(QLayout *layout,alpm_list_t* list)
 {
-        alpm_list_t* i;
+        QString text;
         alpm_depend_t* dep;
+        alpm_list_t* i;
         for(i=list;i;i=alpm_list_next(i)){
                 dep = (alpm_depend_t*)i->data;
-                text += "\t" + QString(dep->name);
-                if(ent->op->get_localpkg(dep->name))text+=" (installed)";
-                text += '\n';
+                text += "<a href='";
+                text += QString(dep->name);
+                text += "'>";
+                text += QString(dep->name);
+                if(ent->op->get_localpkg(dep->name))text+="(installed)";
+                text += "</a>";
+                QLabel *tmp = new QLabel();
+                tmp->setText(text);
+                layout->addWidget(tmp);
+                connect(tmp,SIGNAL(linkActivated(QString)),this,SLOT(slot_newinfo(QString)));
+                text.clear();
         }
         return ;
 }
-void pkg_info::add_pkg_name(QString& text,alpm_list_t* list)
+void pkg_info::add_pkg_name(QLayout* layout,alpm_list_t* list)
 {
+        QString text;
         alpm_list_t* i;
-        alpm_pkg_t* pkg;
         for(i=list;i;i=alpm_list_next(i)){
-                pkg = (alpm_pkg_t*)i->data;
-                text += "\t" + QString(alpm_pkg_get_name(pkg));
-                if(ent->op->check_installed(pkg))text += " (installed)";
-                text += '\n';
+                alpm_pkg_t* p = (alpm_pkg_t*)i->data;
+                text += "<a href='";
+                text += QString(alpm_pkg_get_name(p));
+                text += "'>";
+                text += QString(alpm_pkg_get_name(p));
+                text+="(installed)";
+                text += "</a>";
+                QLabel *tmp = new QLabel();
+                tmp->setText(text);
+                connect(tmp,SIGNAL(linkActivated(QString)),this,SLOT(slot_newinfo(QString)));
+                layout->addWidget(tmp);
+                text.clear();
         }
         return;
 }
@@ -89,6 +109,10 @@ void pkg_info::add_pkg_name(QString& text,alpm_list_t* list)
 pkg_info::~pkg_info()
 {
         delete ui;
+        for(entry* i: this->extent){
+                delete i;
+        }
+
 }
 
 /*---------------SLOT FUNCTION---------------*/
@@ -104,7 +128,7 @@ void pkg_info::slot_remove()
 void pkg_info::slot_detail()
 {
         QString text;
-        text += "URL:\t" + QString(alpm_pkg_get_url(ent->package))+"\n";
+        text += "URL:\t" + QString(alpm_pkg_get_url(ent->package))+"\n\n";
         text += "Repository:\t" + QString(alpm_db_get_name(alpm_pkg_get_db(ent->package))) + "\n";
         text += "Packager:\t" + QString(alpm_pkg_get_packager(ent->package)) + "\n";
 
@@ -141,33 +165,58 @@ void pkg_info::slot_detail()
                 text += "\n";
                 free(note);
         }
+        QLabel *cont = new QLabel();
+        cont->setAlignment(Qt::AlignTop);
+        cont->setText(text);
+        ui->scrollArea->setWidget(cont);
 
-        ui->content->setText(text);
 }
 void pkg_info::slot_depend()
 {
+
+        QWidget *content = new QWidget();
+        content->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
+        QLayout *layout = new QVBoxLayout;
+        content->setLayout(layout);
+        ui->scrollArea->setWidget(content);
+
         QString text;
-        text += "Depends on:\n"; 
+        text += "Depends on:";
+        QLabel *depend = new QLabel();
+        depend->setText(text);
+        layout->addWidget(depend);
+        text.clear();
+
         alpm_list_t* list = ent->op->get_pkg_depend(ent->package);
-        add_depend_name(text,list);
-        text += "\n";
+        add_depend_name(layout,list);
 
-        text += "Required By:\n";
+        text += "\nRequired By:";
+        QLabel *require = new QLabel();
+        require->setText(text);
+        layout->addWidget(require);
+        text.clear();
+
         list = ent->op->get_pkg_require(ent->package);
-        add_pkg_name(text,list);
-        text += "\n";
+        add_pkg_name(layout,list);
 
 
-        text += "Option Depends:\n";
+        text += "\nOption Depends:";
+        QLabel *optdep = new QLabel();
+        optdep->setText(text);
+        layout->addWidget(optdep);
+        text.clear();
+
         list = ent->op->get_pkg_optdepend(ent->package);
-        add_depend_name(text,list);
-        text += "\n";
+        add_depend_name(layout,list);
 
-        text += "Conflicts with:\n";
+        text += "\nConflicts with:";
+        QLabel *conflict = new QLabel();
+        conflict->setText(text);
+        layout->addWidget(conflict);
+        text.clear();
+
         list = alpm_pkg_get_conflicts(ent->package);
-        add_depend_name(text,list);
-        text += "\n";
-        ui->content->setText(text);
+        add_depend_name(layout,list);
 
 }
 void pkg_info::slot_files()
@@ -176,7 +225,9 @@ void pkg_info::slot_files()
         alpm_list_t* files = ent->op->get_pkg_files(ent->package);
         add_file_name(text,files);
         text += "\n";
-        ui->content->setText(text);
+        QLabel *cont = new QLabel();
+        cont->setText(text);
+        ui->scrollArea->setWidget(cont);
         
         free_list_char(files);
 }
@@ -215,6 +266,24 @@ void pkg_info::slot_add_note()
         note->exec();
         ent->op->set_pkg_note(ent->package,text.toLatin1().data());
         slot_detail();
+
+}
+void pkg_info::slot_newinfo(QString pkgName)
+{
+        entry* newEntry;
+        if(ent->op->get_localpkg((char*)pkgName.toLatin1().data())){
+                alpm_pkg_t* p = ent->op->get_localpkg(pkgName.toLatin1().data());
+                newEntry = new entry(p,ent->op);
+        }
+        else{
+                alpm_pkg_t* p = ent->op->find_dbs_pkg(\
+                            alpm_get_syncdbs(ent->op->conf->handle),\
+                            pkgName.toLatin1().data());
+                newEntry = new entry(p,ent->op);
+        }
+        pkg_info *pinfo  = new pkg_info(newEntry);
+        pinfo->show();
+        extent.push_back(newEntry);
 
 }
 
