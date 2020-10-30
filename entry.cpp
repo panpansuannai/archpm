@@ -91,7 +91,7 @@ void entry::install_pkg()
                             emit sig_install_pkg();
 #else
                             succeed = op->check_installed(list);
-                            op->mark_as_dep(deps);
+                            op->mark_as_dep(op->check_installed(deps));
 #endif
                             dialog("ACTION: packages installed have been listed at below",succeed).exec();
                     }
