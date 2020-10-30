@@ -665,7 +665,6 @@ Makefile: archpm.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/lib/qt/mkspec
 		/usr/lib/qt/mkspecs/features/yacc.prf \
 		/usr/lib/qt/mkspecs/features/lex.prf \
 		archpm.pro
-	$(QMAKE) -o Makefile archpm.pro
 /usr/lib/qt/mkspecs/features/spec_pre.prf:
 /usr/lib/qt/mkspecs/common/unix.conf:
 /usr/lib/qt/mkspecs/common/linux.conf:
