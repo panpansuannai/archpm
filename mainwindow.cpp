@@ -34,7 +34,6 @@ mainwindow::mainwindow(QWidget *parent)
         connect(ui->actionFixlck,SIGNAL(triggered()),this,SLOT(slot_main_fixlck()));
         connect(ui->actionConfigure,SIGNAL(triggered()),this,SLOT(slot_main_configure()));
         connect(ui->actionCleandis,SIGNAL(triggered()),this,SLOT(slot_main_cleandis()));
-        connect(ui->actionClean_cache,SIGNAL(triggered()),this,SLOT(slot_main_clean_cachedirs()));
         connect(ui->next,SIGNAL(clicked()),dis,SLOT(slot_next_page()));
         connect(ui->prev,SIGNAL(clicked()),dis,SLOT(slot_prev_page()));
         connect(ui->insall,SIGNAL(clicked()),this,SLOT(slot_main_insall()));
@@ -205,10 +204,4 @@ void mainwindow::slot_main_rmall()
         if(!ok)return;
         alpm_list_t* re = dis->remove_page();
         dialog("The list of removed packages is below.",re).exec();
-}
-
-void mainwindow::slot_main_clean_cachedirs()
-{
-        op->clean_pkgcache();
-        dialog(0,"Clean up cache.").exec();
 }

@@ -114,7 +114,6 @@ public:
         alpm_list_t* get_missdeps();
         alpm_list_t* database_update(int);
         alpm_list_t* get_pkgs_sysupdate();
-        int clean_pkgcache();
         void mark_as_dep(alpm_list_t*);
         int match_db(alpm_db_t*, int);
 

@@ -727,15 +727,6 @@ void operation::mark_as_dep(alpm_list_t* list)
                 }
         }
 }
-int operation::clean_pkgcache()
-{
-        alpm_list_t* cachedirs = alpm_option_get_cachedirs(conf->handle);
-        alpm_list_t* i;
-        for(i=cachedirs;i;i=alpm_list_next(i)){
-                rm_file((const char*)i->data);
-        }
-        return 0;
-}
 bool operation::cmp_pkg(alpm_pkg_t* p1,alpm_pkg_t* p2)
 {
         return hash_compute(p1)==hash_compute(p2);

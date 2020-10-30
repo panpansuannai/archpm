@@ -49,8 +49,6 @@ public slots:
         void slot_main_insall();
         /* when click remove all */
         void slot_main_rmall();
-        /* cleanup the packages cache directory */
-        void slot_main_clean_cachedirs();
 private:
         Ui::mainwindow *ui;
         int selected_db = ALL;

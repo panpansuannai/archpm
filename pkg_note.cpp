@@ -7,6 +7,7 @@ pkg_note::pkg_note(QString* s,QWidget *parent) :
 {
     ui->setupUi(this);
     ui->textEdit->setText(*s);
+    this->setWindowTitle("Add Note");
 }
 
 pkg_note::~pkg_note()

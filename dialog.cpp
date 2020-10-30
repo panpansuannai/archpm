@@ -11,6 +11,7 @@ dialog::dialog(QString title, alpm_list_t* list,QString add,QWidget *parent) :
         ui->setupUi(this);
         ui->title->setText(title);
 
+        this->setWindowTitle("Warning");
         QScrollArea* area = new QScrollArea();
         area->setSizePolicy(QSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred));
         ui->layout->addWidget(area);
@@ -42,6 +43,7 @@ dialog::dialog(int block,QString title,QString content,QWidget *parent) :
         ui->setupUi(this);
         connect(this,SIGNAL(sig_close()),this,SLOT(close()));
 
+        this->setWindowTitle("warning");
         ui->title->setText(title);
         if(content!=nullptr){
                 QScrollArea* area = new QScrollArea();
