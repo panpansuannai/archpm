@@ -49,7 +49,6 @@ FORMS += \
     pkg_note.ui
 
 TRANSLATIONS += \
-    archpm_zh_CN.ts
 
 LIBS += \
     /lib/libalpm.so
