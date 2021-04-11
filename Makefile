@@ -358,149 +358,149 @@ src/pkg_note.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pkg_note.cc.s
 .PHONY : src/pkg_note.cc.s
 
-src/pm/cb.o: src/pm/cb.cpp.o
-.PHONY : src/pm/cb.o
+src/pm2/configure.o: src/pm2/configure.cc.o
+.PHONY : src/pm2/configure.o
 
 # target to build an object file
-src/pm/cb.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/cb.cpp.o
-.PHONY : src/pm/cb.cpp.o
+src/pm2/configure.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/configure.cc.o
+.PHONY : src/pm2/configure.cc.o
 
-src/pm/cb.i: src/pm/cb.cpp.i
-.PHONY : src/pm/cb.i
+src/pm2/configure.i: src/pm2/configure.cc.i
+.PHONY : src/pm2/configure.i
 
 # target to preprocess a source file
-src/pm/cb.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/cb.cpp.i
-.PHONY : src/pm/cb.cpp.i
+src/pm2/configure.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/configure.cc.i
+.PHONY : src/pm2/configure.cc.i
 
-src/pm/cb.s: src/pm/cb.cpp.s
-.PHONY : src/pm/cb.s
+src/pm2/configure.s: src/pm2/configure.cc.s
+.PHONY : src/pm2/configure.s
 
 # target to generate assembly for a file
-src/pm/cb.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/cb.cpp.s
-.PHONY : src/pm/cb.cpp.s
+src/pm2/configure.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/configure.cc.s
+.PHONY : src/pm2/configure.cc.s
 
-src/pm/conf.o: src/pm/conf.cpp.o
-.PHONY : src/pm/conf.o
+src/pm2/database.o: src/pm2/database.cc.o
+.PHONY : src/pm2/database.o
 
 # target to build an object file
-src/pm/conf.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/conf.cpp.o
-.PHONY : src/pm/conf.cpp.o
+src/pm2/database.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/database.cc.o
+.PHONY : src/pm2/database.cc.o
 
-src/pm/conf.i: src/pm/conf.cpp.i
-.PHONY : src/pm/conf.i
+src/pm2/database.i: src/pm2/database.cc.i
+.PHONY : src/pm2/database.i
 
 # target to preprocess a source file
-src/pm/conf.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/conf.cpp.i
-.PHONY : src/pm/conf.cpp.i
+src/pm2/database.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/database.cc.i
+.PHONY : src/pm2/database.cc.i
 
-src/pm/conf.s: src/pm/conf.cpp.s
-.PHONY : src/pm/conf.s
+src/pm2/database.s: src/pm2/database.cc.s
+.PHONY : src/pm2/database.s
 
 # target to generate assembly for a file
-src/pm/conf.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/conf.cpp.s
-.PHONY : src/pm/conf.cpp.s
+src/pm2/database.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/database.cc.s
+.PHONY : src/pm2/database.cc.s
 
-src/pm/debug.o: src/pm/debug.cpp.o
-.PHONY : src/pm/debug.o
+src/pm2/log.o: src/pm2/log.cc.o
+.PHONY : src/pm2/log.o
 
 # target to build an object file
-src/pm/debug.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/debug.cpp.o
-.PHONY : src/pm/debug.cpp.o
+src/pm2/log.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/log.cc.o
+.PHONY : src/pm2/log.cc.o
 
-src/pm/debug.i: src/pm/debug.cpp.i
-.PHONY : src/pm/debug.i
+src/pm2/log.i: src/pm2/log.cc.i
+.PHONY : src/pm2/log.i
 
 # target to preprocess a source file
-src/pm/debug.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/debug.cpp.i
-.PHONY : src/pm/debug.cpp.i
+src/pm2/log.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/log.cc.i
+.PHONY : src/pm2/log.cc.i
 
-src/pm/debug.s: src/pm/debug.cpp.s
-.PHONY : src/pm/debug.s
+src/pm2/log.s: src/pm2/log.cc.s
+.PHONY : src/pm2/log.s
 
 # target to generate assembly for a file
-src/pm/debug.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/debug.cpp.s
-.PHONY : src/pm/debug.cpp.s
+src/pm2/log.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/log.cc.s
+.PHONY : src/pm2/log.cc.s
 
-src/pm/interface.o: src/pm/interface.cpp.o
-.PHONY : src/pm/interface.o
+src/pm2/option.o: src/pm2/option.cc.o
+.PHONY : src/pm2/option.o
 
 # target to build an object file
-src/pm/interface.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/interface.cpp.o
-.PHONY : src/pm/interface.cpp.o
+src/pm2/option.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/option.cc.o
+.PHONY : src/pm2/option.cc.o
 
-src/pm/interface.i: src/pm/interface.cpp.i
-.PHONY : src/pm/interface.i
+src/pm2/option.i: src/pm2/option.cc.i
+.PHONY : src/pm2/option.i
 
 # target to preprocess a source file
-src/pm/interface.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/interface.cpp.i
-.PHONY : src/pm/interface.cpp.i
+src/pm2/option.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/option.cc.i
+.PHONY : src/pm2/option.cc.i
 
-src/pm/interface.s: src/pm/interface.cpp.s
-.PHONY : src/pm/interface.s
+src/pm2/option.s: src/pm2/option.cc.s
+.PHONY : src/pm2/option.s
 
 # target to generate assembly for a file
-src/pm/interface.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/interface.cpp.s
-.PHONY : src/pm/interface.cpp.s
+src/pm2/option.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/option.cc.s
+.PHONY : src/pm2/option.cc.s
 
-src/pm/parse.o: src/pm/parse.cpp.o
-.PHONY : src/pm/parse.o
+src/pm2/optparse.o: src/pm2/optparse.cc.o
+.PHONY : src/pm2/optparse.o
 
 # target to build an object file
-src/pm/parse.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/parse.cpp.o
-.PHONY : src/pm/parse.cpp.o
+src/pm2/optparse.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/optparse.cc.o
+.PHONY : src/pm2/optparse.cc.o
 
-src/pm/parse.i: src/pm/parse.cpp.i
-.PHONY : src/pm/parse.i
+src/pm2/optparse.i: src/pm2/optparse.cc.i
+.PHONY : src/pm2/optparse.i
 
 # target to preprocess a source file
-src/pm/parse.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/parse.cpp.i
-.PHONY : src/pm/parse.cpp.i
+src/pm2/optparse.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/optparse.cc.i
+.PHONY : src/pm2/optparse.cc.i
 
-src/pm/parse.s: src/pm/parse.cpp.s
-.PHONY : src/pm/parse.s
+src/pm2/optparse.s: src/pm2/optparse.cc.s
+.PHONY : src/pm2/optparse.s
 
 # target to generate assembly for a file
-src/pm/parse.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/parse.cpp.s
-.PHONY : src/pm/parse.cpp.s
+src/pm2/optparse.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/optparse.cc.s
+.PHONY : src/pm2/optparse.cc.s
 
-src/pm/util.o: src/pm/util.cpp.o
-.PHONY : src/pm/util.o
+src/pm2/package.o: src/pm2/package.cc.o
+.PHONY : src/pm2/package.o
 
 # target to build an object file
-src/pm/util.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/util.cpp.o
-.PHONY : src/pm/util.cpp.o
+src/pm2/package.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/package.cc.o
+.PHONY : src/pm2/package.cc.o
 
-src/pm/util.i: src/pm/util.cpp.i
-.PHONY : src/pm/util.i
+src/pm2/package.i: src/pm2/package.cc.i
+.PHONY : src/pm2/package.i
 
 # target to preprocess a source file
-src/pm/util.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/util.cpp.i
-.PHONY : src/pm/util.cpp.i
+src/pm2/package.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/package.cc.i
+.PHONY : src/pm2/package.cc.i
 
-src/pm/util.s: src/pm/util.cpp.s
-.PHONY : src/pm/util.s
+src/pm2/package.s: src/pm2/package.cc.s
+.PHONY : src/pm2/package.s
 
 # target to generate assembly for a file
-src/pm/util.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm/util.cpp.s
-.PHONY : src/pm/util.cpp.s
+src/pm2/package.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pm2/package.cc.s
+.PHONY : src/pm2/package.cc.s
 
 # Help Target
 help:
@@ -539,24 +539,24 @@ help:
 	@echo "... src/pkg_note.o"
 	@echo "... src/pkg_note.i"
 	@echo "... src/pkg_note.s"
-	@echo "... src/pm/cb.o"
-	@echo "... src/pm/cb.i"
-	@echo "... src/pm/cb.s"
-	@echo "... src/pm/conf.o"
-	@echo "... src/pm/conf.i"
-	@echo "... src/pm/conf.s"
-	@echo "... src/pm/debug.o"
-	@echo "... src/pm/debug.i"
-	@echo "... src/pm/debug.s"
-	@echo "... src/pm/interface.o"
-	@echo "... src/pm/interface.i"
-	@echo "... src/pm/interface.s"
-	@echo "... src/pm/parse.o"
-	@echo "... src/pm/parse.i"
-	@echo "... src/pm/parse.s"
-	@echo "... src/pm/util.o"
-	@echo "... src/pm/util.i"
-	@echo "... src/pm/util.s"
+	@echo "... src/pm2/configure.o"
+	@echo "... src/pm2/configure.i"
+	@echo "... src/pm2/configure.s"
+	@echo "... src/pm2/database.o"
+	@echo "... src/pm2/database.i"
+	@echo "... src/pm2/database.s"
+	@echo "... src/pm2/log.o"
+	@echo "... src/pm2/log.i"
+	@echo "... src/pm2/log.s"
+	@echo "... src/pm2/option.o"
+	@echo "... src/pm2/option.i"
+	@echo "... src/pm2/option.s"
+	@echo "... src/pm2/optparse.o"
+	@echo "... src/pm2/optparse.i"
+	@echo "... src/pm2/optparse.s"
+	@echo "... src/pm2/package.o"
+	@echo "... src/pm2/package.i"
+	@echo "... src/pm2/package.s"
 .PHONY : help
 
 

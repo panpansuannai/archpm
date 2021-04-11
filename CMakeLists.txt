@@ -15,7 +15,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
-aux_source_directory(src/pm/  PM_FILES)
+aux_source_directory(src/pm2/  PM_FILES)
 aux_source_directory(src/     UI_CXX_FILES)
 
 set(PROJECT_SOURCES

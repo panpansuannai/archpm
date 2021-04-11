@@ -1,9 +1,17 @@
 #include "mainwindow.h"
 #include "dialog.h"
 
-#include "pm/interface.h"
 #include <QApplication>
 #include <QMessageBox>
+
+int check_uid()
+{
+        int uid = getuid();
+        if(uid!=0){
+                return 1;
+        }
+        return 0;
+}
 
 int main(int argc, char *argv[])
 {

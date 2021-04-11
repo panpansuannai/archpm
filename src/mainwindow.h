@@ -5,7 +5,9 @@
 #include <QLabel>
 
 #include <memory>
+
 #include "monitor.h"
+#include "pm2/configure.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class mainwindow; }
@@ -16,37 +18,37 @@ class mainwindow : public QMainWindow
         Q_OBJECT
 
 public:
-        void set_s_db();
-
         mainwindow(QWidget *parent = nullptr);
         ~mainwindow();
 public slots:
         /* when the search button clicked */
-        void slot_main_search();
+        void slot_search();
         /* get the installed pkgs */
-        void slot_main_installed();
+        void slot_get_installed();
         /* database update */
-        void slot_main_db_update();
+        void slot_database_update();
         /* config */
-        void slot_main_configure();
+        void slot_configure();
         /* orphans */
-        void slot_main_orphans();
+        void slot_get_orphans();
         /* system update */
-        void slot_main_sysupdate();
+        void slot_sysupdate();
         /* about infomation */
-        void slot_main_about();
+        void slot_about();
         /* rm database lock file */
-        void slot_main_fixlck();
+        void slot_fixlock();
         /* check dependencies */
-        void slot_main_depend();
+        void slot_get_depend();
         /* cleanup the display */
-        void slot_main_cleandis();
+        void slot_clean_result();
         /* when click install all */
-        void slot_main_insall();
+        void slot_install_page();
         /* when click remove all */
-        void slot_main_rmall();
+        void slot_remove_page();
 private:
-        QLabel *msg;
+        std::unique_ptr<Configure> config_;
+        std::vector<std::shared_ptr<DataBase>> databases_;
+        QLabel *msg_;
         std::shared_ptr<Monitor> monitor_;
         Ui::mainwindow *ui;
 };

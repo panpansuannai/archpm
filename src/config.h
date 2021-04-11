@@ -1,28 +1,25 @@
-#ifndef CONFIG_H
-#define CONFIG_H
+#pragma once
 
 #include <QDialog>
 #include <QLineEdit>
 
-#include "pm/interface.h"
+#include "pm2/configure.h"
 
 namespace Ui {
 class config;
 }
 
-class config : public QDialog
+class Config : public QDialog
 {
         Q_OBJECT
 
 public:
-        explicit config(QWidget *parent = nullptr,conf_t* _conf=nullptr);
-        conf_t* conf;
-        void list_config(QLineEdit*,alpm_list_t*);
-        ~config();
+        explicit Config(std::shared_ptr<Configure> config, QWidget *parent = nullptr);
+        ~Config();
 public slots:
         void accept();
 private:
         Ui::config *ui;
+        std::shared_ptr<Configure> config_;
 };
 
-#endif // CONFIG_H
