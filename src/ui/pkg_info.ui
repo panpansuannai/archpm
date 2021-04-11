@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pkg_info</class>
+ <widget class="QDialog" name="pkg_info">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frame">
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QPushButton" name="detail">
+           <property name="font">
+            <font>
+             <family>Noto Sans Thai UI</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Detail</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="depend">
+           <property name="font">
+            <font>
+             <family>Noto Sans Thai UI</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Depend</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="files">
+           <property name="font">
+            <font>
+             <family>Noto Sans Thai UI</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Files</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="add_note">
+           <property name="font">
+            <font>
+             <family>Noto Sans Thai UI</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>addNote</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="check_deps">
+           <property name="font">
+            <font>
+             <family>Noto Sans Thai UI</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>checkDeps</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="check_files">
+           <property name="font">
+            <font>
+             <family>Noto Sans Thai UI</family>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>checkFiles</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_2">
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QScrollArea" name="scrollArea">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>710</width>
+              <height>497</height>
+             </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <family>Noto Sans Sinhala UI</family>
+             </font>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <layout class="QVBoxLayout" name="vertical_layout">
+               <item>
+                <widget class="QFrame" name="frame_3">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Sunken</enum>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QWidget" name="widget_4" native="true">
+                    <property name="font">
+                     <font>
+                      <family>Noto Sans Sinhala UI</family>
+                      <underline>false</underline>
+                     </font>
+                    </property>
+                    <property name="mouseTracking">
+                     <bool>false</bool>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_6">
+                     <item>
+                      <widget class="QLabel" name="name">
+                       <property name="font">
+                        <font>
+                         <family>Noto Kufi Arabic</family>
+                         <weight>75</weight>
+                         <bold>true</bold>
+                         <underline>false</underline>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="desc">
+                       <property name="font">
+                        <font>
+                         <family>Noto Sans Thin</family>
+                         <pointsize>12</pointsize>
+                         <weight>50</weight>
+                         <bold>false</bold>
+                         <underline>false</underline>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>TextLabel</string>
+                       </property>
+                       <property name="textFormat">
+                        <enum>Qt::AutoText</enum>
+                       </property>
+                       <property name="wordWrap">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="widget_5" native="true">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
+                    <layout class="QVBoxLayout" name="verticalLayout_5">
+                     <item>
+                      <widget class="QPushButton" name="install">
+                       <property name="font">
+                        <font>
+                         <family>Noto Sans Thai UI</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Install</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="remove">
+                       <property name="font">
+                        <font>
+                         <family>Noto Sans Thai UI</family>
+                         <pointsize>12</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Remove</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="content">
+                 <property name="font">
+                  <font>
+                   <family>Noto Sans Thai UI</family>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>TextLabel</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                 </property>
+                 <property name="textInteractionFlags">
+                  <set>Qt::TextBrowserInteraction</set>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>pkg_info</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>258</x>
+     <y>589</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>pkg_info</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>326</x>
+     <y>589</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
