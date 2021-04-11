@@ -8,7 +8,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
@@ -21,8 +21,10 @@ aux_source_directory(src/     UI_CXX_FILES)
 set(PROJECT_SOURCES
         src/ui/config.ui
         src/ui/dialog.ui
-        src/ui/entry.ui
         src/ui/mainwindow.ui
+        src/ui/pkgentry.ui
+        src/ui/pkginfo.ui
+        src/ui/pkgnote.ui
         ${UI_CXX_FILES}
         ${PM_FILES}
 )

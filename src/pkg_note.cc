@@ -1,9 +1,9 @@
 #include "pkg_note.h"
-#include "ui/ui_pkg_note.h"
+#include "ui/ui_pkgnote.h"
 
 pkg_note::pkg_note(QString* s,QWidget *parent) :
     QDialog(parent),text(s),
-    ui(new Ui::pkg_note)
+    ui(new Ui::pkgnote)
 {
     ui->setupUi(this);
     ui->textEdit->setText(*s);

@@ -214,54 +214,6 @@ src/dialog.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/dialog.cc.s
 .PHONY : src/dialog.cc.s
 
-src/display.o: src/display.cc.o
-.PHONY : src/display.o
-
-# target to build an object file
-src/display.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/display.cc.o
-.PHONY : src/display.cc.o
-
-src/display.i: src/display.cc.i
-.PHONY : src/display.i
-
-# target to preprocess a source file
-src/display.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/display.cc.i
-.PHONY : src/display.cc.i
-
-src/display.s: src/display.cc.s
-.PHONY : src/display.s
-
-# target to generate assembly for a file
-src/display.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/display.cc.s
-.PHONY : src/display.cc.s
-
-src/entry.o: src/entry.cc.o
-.PHONY : src/entry.o
-
-# target to build an object file
-src/entry.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/entry.cc.o
-.PHONY : src/entry.cc.o
-
-src/entry.i: src/entry.cc.i
-.PHONY : src/entry.i
-
-# target to preprocess a source file
-src/entry.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/entry.cc.i
-.PHONY : src/entry.cc.i
-
-src/entry.s: src/entry.cc.s
-.PHONY : src/entry.s
-
-# target to generate assembly for a file
-src/entry.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/entry.cc.s
-.PHONY : src/entry.cc.s
-
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -309,6 +261,54 @@ src/mainwindow.s: src/mainwindow.cc.s
 src/mainwindow.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/mainwindow.cc.s
 .PHONY : src/mainwindow.cc.s
+
+src/monitor.o: src/monitor.cc.o
+.PHONY : src/monitor.o
+
+# target to build an object file
+src/monitor.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/monitor.cc.o
+.PHONY : src/monitor.cc.o
+
+src/monitor.i: src/monitor.cc.i
+.PHONY : src/monitor.i
+
+# target to preprocess a source file
+src/monitor.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/monitor.cc.i
+.PHONY : src/monitor.cc.i
+
+src/monitor.s: src/monitor.cc.s
+.PHONY : src/monitor.s
+
+# target to generate assembly for a file
+src/monitor.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/monitor.cc.s
+.PHONY : src/monitor.cc.s
+
+src/pkg_entry.o: src/pkg_entry.cc.o
+.PHONY : src/pkg_entry.o
+
+# target to build an object file
+src/pkg_entry.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pkg_entry.cc.o
+.PHONY : src/pkg_entry.cc.o
+
+src/pkg_entry.i: src/pkg_entry.cc.i
+.PHONY : src/pkg_entry.i
+
+# target to preprocess a source file
+src/pkg_entry.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pkg_entry.cc.i
+.PHONY : src/pkg_entry.cc.i
+
+src/pkg_entry.s: src/pkg_entry.cc.s
+.PHONY : src/pkg_entry.s
+
+# target to generate assembly for a file
+src/pkg_entry.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/archpm.dir/build.make CMakeFiles/archpm.dir/src/pkg_entry.cc.s
+.PHONY : src/pkg_entry.cc.s
 
 src/pkg_info.o: src/pkg_info.cc.o
 .PHONY : src/pkg_info.o
@@ -521,18 +521,18 @@ help:
 	@echo "... src/dialog.o"
 	@echo "... src/dialog.i"
 	@echo "... src/dialog.s"
-	@echo "... src/display.o"
-	@echo "... src/display.i"
-	@echo "... src/display.s"
-	@echo "... src/entry.o"
-	@echo "... src/entry.i"
-	@echo "... src/entry.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
 	@echo "... src/mainwindow.o"
 	@echo "... src/mainwindow.i"
 	@echo "... src/mainwindow.s"
+	@echo "... src/monitor.o"
+	@echo "... src/monitor.i"
+	@echo "... src/monitor.s"
+	@echo "... src/pkg_entry.o"
+	@echo "... src/pkg_entry.i"
+	@echo "... src/pkg_entry.s"
 	@echo "... src/pkg_info.o"
 	@echo "... src/pkg_info.i"
 	@echo "... src/pkg_info.s"

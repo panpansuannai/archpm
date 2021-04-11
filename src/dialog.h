@@ -4,22 +4,19 @@
 #include <QDialog>
 #include <QLabel>
 
-#include "pm/interface.h"
-
 namespace Ui {
 class dialog;
 }
 
-class dialog : public QDialog
+class Dialog : public QDialog
 {
         Q_OBJECT
 
 public:
-        explicit dialog(int,QString,QString content = nullptr,QWidget *parent = nullptr);
-        explicit dialog(QString,alpm_list_t*,QString add=nullptr,QWidget *parent = nullptr);
+        explicit Dialog(QString, QString, QWidget* parent = nullptr);
 
         QLabel* desc = nullptr;
-        ~dialog();
+        ~Dialog();
 signals:
         void sig_close();
 public slots:

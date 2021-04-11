@@ -3,9 +3,9 @@
 
 #include <QMainWindow>
 #include <QLabel>
-#include "display.h"
 
-#include "pm/interface.h"
+#include <memory>
+#include "monitor.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class mainwindow; }
@@ -16,10 +16,6 @@ class mainwindow : public QMainWindow
         Q_OBJECT
 
 public:
-        operation* op;
-        display* dis;
-        QLabel *msg;
-
         void set_s_db();
 
         mainwindow(QWidget *parent = nullptr);
@@ -50,7 +46,8 @@ public slots:
         /* when click remove all */
         void slot_main_rmall();
 private:
+        QLabel *msg;
+        std::shared_ptr<Monitor> monitor_;
         Ui::mainwindow *ui;
-        int selected_db = ALL;
 };
 #endif // MAINWINDOW_H

@@ -62,7 +62,7 @@ void config::accept()
                 char* oldconf = conf->conffile;
                 conf->conffile = value;
                 if(conf->conf_parsefile(conf->conffile)){
-                        dialog(0,"configure file invalid!").exec();
+                        Dialog("configure file invalid!", "").exec();
                         conf->conffile = oldconf;
                         free(value);
                 }

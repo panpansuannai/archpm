@@ -1,29 +1,26 @@
 #ifndef PKG_INFO_H
 #define PKG_INFO_H
 
-#include "entry.h"
+#include "pkg_entry.h"
 
 #include <QDialog>
 
 #include <alpm.h>
 
 namespace Ui {
-class pkg_info;
+class pkginfo;
 }
 
-class pkg_info : public QDialog
+class PkgInfo : public QDialog
 {
     Q_OBJECT
 
 public:
-    entry *ent;
-    explicit pkg_info(entry*,QWidget *parent = nullptr);
-    alpm_pkg_t* pkg;
-    std::vector<entry*> extent;
+    explicit PkgInfo(Package::PackagePtr, QWidget *parent = nullptr);
     void add_pkg_name(QLayout*,alpm_list_t*);
     void add_depend_name(QLayout*,alpm_list_t*);
     void add_file_name(QString&,alpm_list_t*);
-    ~pkg_info();
+    ~PkgInfo();
 
 public slots:
         void slot_install();
@@ -37,7 +34,8 @@ public slots:
         void slot_add_note();
         void slot_newinfo(QString);
 private:
-    Ui::pkg_info *ui;
+    Package::PackagePtr package_;
+    Ui::pkginfo *ui;
 };
 
 #endif // PKG_INFO_H

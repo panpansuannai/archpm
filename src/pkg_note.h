@@ -4,7 +4,7 @@
 #include <QDialog>
 
 namespace Ui {
-class pkg_note;
+class pkgnote;
 }
 
 class pkg_note : public QDialog
@@ -19,7 +19,7 @@ public slots:
     void accept();
 
 private:
-    Ui::pkg_note *ui;
+    Ui::pkgnote *ui;
 };
 
 #endif // PKG_NOTE_H
