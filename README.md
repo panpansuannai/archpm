@@ -1,2 +1,2 @@
 # archpm
-A stupid GUI package management for Arch Linux
+A stupid GUI package manager for Arch Linux
