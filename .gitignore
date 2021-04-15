@@ -3,6 +3,7 @@
 #
 
 compile_commands.json
+archpm
 *~
 *.autosave
 *.a
