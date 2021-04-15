@@ -28,7 +28,7 @@ set(PROJECT_SOURCES
         ${UI_CXX_FILES}
         ${PM_FILES}
 )
-
+include(cmake/check-code-style.cmake)
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(archpm
       ${PROJECT_SOURCES}

@@ -26,21 +26,20 @@
 
 #include "conf.h"
 
-
 /* save the include files
- * that have been parsed 
+ * that have been parsed
  * to save the time
  */
 struct parsed {
-        char * file;
-        alpm_list_t * server;
+  char *file;
+  alpm_list_t *server;
 };
-extern alpm_list_t * pd;
+extern alpm_list_t *pd;
 
-void stchar(char**, std::string);
+void stchar(char **, std::string);
 
-int parseline_option(std::string&, option_t* );
+int parseline_option(std::string &, option_t *);
 
-int parseline_repo(std::string&,repo_t*);
+int parseline_repo(std::string &, repo_t *);
 
 #endif

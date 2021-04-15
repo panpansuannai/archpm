@@ -12,9 +12,8 @@ static int get_page_number(QComboBox *com) {
 }
 
 Monitor::Monitor(QVBoxLayout *layout, QComboBox *num, QLabel *m)
-    : layout_(layout), combo_(num), msg_(m),
-      cur_page_index_(0), items_per_page_(get_page_number(combo_)),
-      wait_queue_(), view_() {}
+    : layout_(layout), combo_(num), msg_(m), cur_page_index_(0),
+      items_per_page_(get_page_number(combo_)), wait_queue_(), view_() {}
 
 void Monitor::push_queue(PackagePtr package) { wait_queue_.push_back(package); }
 
@@ -54,7 +53,8 @@ void Monitor::next_page() {
   clear_view();
   size_t i = 0;
   for (; i < items_per_page_ && cur_page_index_ + i < wait_queue_.size(); ++i) {
-    PkgEntryPtr pkg_entry_ptr = std::make_shared<PkgEntry>(wait_queue_[cur_page_index_ + i]);
+    PkgEntryPtr pkg_entry_ptr =
+        std::make_shared<PkgEntry>(wait_queue_[cur_page_index_ + i]);
     view_.push_back(pkg_entry_ptr);
   }
   cur_page_index_ += i;

@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
         QApplication a(argc, argv);
         if(check_uid()){
                 Dialog("", "You must to have root privileage").exec();
-                exit(1);
+                //exit(1);
         }
         mainwindow w;
         w.show();

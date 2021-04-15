@@ -21,10 +21,9 @@
 #include "conf.h"
 #include <cstdio>
 
-
 void debug(std::string s);
-void  debug_db(alpm_db_t* db);
-void  debug_conf(conf_t* conf);
-void debug_handle(conf_t* conf);
+void debug_db(alpm_db_t *db);
+void debug_conf(conf_t *conf);
+void debug_handle(conf_t *conf);
 
 #endif

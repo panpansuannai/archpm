@@ -4,8 +4,8 @@
 #include <alpm_list.h>
 
 #include "configure.h"
-#include "option.h"
 #include "log.h"
+#include "option.h"
 
 string Configure::get_hold_packages() { return string(); }
 

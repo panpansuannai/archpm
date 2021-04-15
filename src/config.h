@@ -9,17 +9,16 @@ namespace Ui {
 class config;
 }
 
-class Config : public QDialog
-{
-        Q_OBJECT
+class Config : public QDialog {
+  Q_OBJECT
 
 public:
-        explicit Config(std::shared_ptr<Configure> config, QWidget *parent = nullptr);
-        ~Config();
+  explicit Config(std::shared_ptr<Configure> config, QWidget *parent = nullptr);
+  ~Config();
 public slots:
-        void accept();
-private:
-        Ui::config *ui;
-        std::shared_ptr<Configure> config_;
-};
+  void accept();
 
+private:
+  Ui::config *ui;
+  std::shared_ptr<Configure> config_;
+};

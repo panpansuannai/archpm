@@ -23,19 +23,19 @@
 #include "util.h"
 #include <alpm.h>
 
-#include <unistd.h>
+#include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <string.h>
+#include <unistd.h>
 
-extern char* timeout_db;
-extern char* timeout_pkg;
+extern char *timeout_db;
+extern char *timeout_pkg;
 void cb_event(alpm_event_t *event);
 
 void cb_quest(alpm_question_t *question);
 
 void cb_prog(alpm_progress_t event, const char *pkgname, int percent,
-                   size_t howmany, size_t remain);
+             size_t howmany, size_t remain);
 
 void cb_tdl(off_t total);
 

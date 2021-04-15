@@ -19,30 +19,29 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#include <string>
 #include <alpm.h>
+#include <string>
 
-
-void stchar(char**, std::string);
+void stchar(char **, std::string);
 
 int check_uid();
 
 void clean_up(void);
 
-void clean_sig(alpm_handle_t*);
+void clean_sig(alpm_handle_t *);
 
-bool check_file(const char*);
+bool check_file(const char *);
 
-alpm_list_t* copy_pkgs_name(alpm_list_t*);
+alpm_list_t *copy_pkgs_name(alpm_list_t *);
 
-void free_list_char(alpm_list_t*);
+void free_list_char(alpm_list_t *);
 
-alpm_list_t* string_to_list(const char*);
-alpm_list_t* str_split(const char*);
+alpm_list_t *string_to_list(const char *);
+alpm_list_t *str_split(const char *);
 
-int rm_file(const char* path);
+int rm_file(const char *path);
 
-char* get_size(int);
+char *get_size(int);
 
 char *strreplace(const char *, const char *, const char *);
 #endif

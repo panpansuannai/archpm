@@ -7,10 +7,9 @@
 
 Log LOG;
 
-Log& Log::operator<<(string str)
-{
+Log &Log::operator<<(string str) {
 #ifdef STD_LOG
-    std::cout << str ;
+  std::cout << str;
 #endif
-    return *this;
+  return *this;
 }

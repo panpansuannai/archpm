@@ -21,6 +21,5 @@ public slots:
   void remove_pkg();
 
 private:
-  Ui::pkgentry* ui;
+  Ui::pkgentry *ui;
 };
-

@@ -7,7 +7,7 @@ using std::string;
 
 class Log {
 public:
-    Log& operator<<(string);
+  Log &operator<<(string);
 };
 
 extern Log LOG;
